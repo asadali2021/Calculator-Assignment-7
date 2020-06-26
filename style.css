@@ -20,6 +20,33 @@ body{
     left: 660px;
     right: 0px;
 }
+@media only screen and (max-width:600px){
+    .bg{
+        background: linear-gradient(to right, #e91e63,#3f51b5);
+        opacity: 0.5;
+        padding: 30%;
+        padding-left: 2%;
+        padding-right: 15%;
+        padding-top: 30%;
+        padding-bottom: 100%;
+        position: relative;
+        width: 80%;
+        height: 100%;
+        margin: 0px 0px 0px 0px;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+    #good{
+        position: relative;
+        top:60px; 
+        right:160px;
+        bottom:60px;
+        left:-280px;
+    }
+}
+
 /* #one{
     width: 175px !important;
 } */
@@ -63,7 +90,7 @@ h1 {
     font-size: 38px;
     text-decoration: underline;
     position: relative;
-    top: -40px;
-    right: 400px;
+    top: 0px;
+    right: 280px;
     
 }

@@ -1,67 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asad's Calculator</title>
     <link href="style.css" type="text/css" rel="stylesheet" />
     <script src="app.js"></script>
 </head>
 
 <body>
-<div class="bg"></div>
+    <div class="all">
+        <div class="first">
+            <div class="bg">
+
+            </div>
+            
+        </div>
+        <div class="second">
+            <div class="main">
+                <h1 onmouseover="this.style.color='yellow'" id="good">THE CALCULATOR:</h1> 
+                <form name="form">
+                    <input class="textview" name="textview" onfocus="this.style.color='#e91'"
+                        onblur="this.style.color='#000'">
+                </form>
+                <table>
+                    <tr>
+                        <td colspan="2"><button class="button" style="width: 174px" type="button" value="C"
+                                onclick="clean()" onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">CLEAR</button> </td>
+                        <td colspan="2"><button class="button" style="width: 174px" type="button" value="B"
+                                onclick="back()" onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">BACK</button> </td>
 
 
-    
-   <div class="main">
-        <h1 onmouseover="this.style.color='yellow'">THE CALCULATOR:</h1>
-        <form name="form">
-            <input class="textview" name="textview" onfocus="this.style.color='#e91'" onblur="this.style.color='#000'">
-        </form>
-        <table>
-            <tr>
-                <td colspan="2"><button class="button" style="width: 174px" type="button" value="C" onclick="clean()" onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">CLEAR</button> </td>
-                <td colspan="2"><button class="button" style="width: 174px" type="button" value="B" onclick="back()"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">BACK</button> </td>
-                
-               
-            </tr>
-            <tr>
-                <td><button class="button" type="button" value="7" onclick="insert(7)"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">7</button> </td>
-                <td><button class="button" type="button" value="8" onclick="insert(8)"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">8</button> </td>
-                <td><button class="button" type="button" value="9" onclick="insert(9)"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">9</button> </td>
-                <td><button class="button" type="button" value="/" onclick="insert('/')"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">/</button> </td>
-                
-            </tr>
-            <tr>
-                <td><button class="button" type="button" value="4" onclick="insert(4)"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">4</button> </td>
-                <td><button class="button" type="button" value="5" onclick="insert(5)"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">5</button> </td>
-                <td><button class="button" type="button" value="6" onclick="insert(6)"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">6</button> </td>
-                <td><button class="button" type="button" value="x" onclick="insert('*')"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">x</button> </td>
-                
-            </tr>
-            <tr>
-                <td><button class="button" type="button" value="1" onclick="insert(1)"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">1</button></td>
-                <td><button class="button" type="button" value="2" onclick="insert(2)"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">2</button> </td>
-                <td><button class="button" type="button" value="3" onclick="insert(3)"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">3</button> </td>
-                <td><button class="button" type="button" value="+" onclick="insert('+')"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">+</button> </td>
-                
-            </tr>
-            <tr>
-                <td colspan="1"><button type="button" class="button" value="sin" onclick="sin()" onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">Sin</button> </td>
-                <td colspan="1"><button type="button" class="button" value="cos" onclick="cos()" onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">Cos</button> </td>
-                <td colspan="1"><button type="button" class="button" value="tan" onclick="tan()" onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">Tan</button> </td>
-                <td><button class="button" type="button" value="-" onclick="insert('-')"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">-</button> </td>
-        </tr>
-            <tr>
-                <td><button id="one" class="button" type="button" value="0" onclick="insert(0)"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">0</button>
-                </td>
-                <td><button class="button" type="button" value="." onclick="insert('.')" onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">.</button></td>
-                <td><button type="button" class="button" value="sqrt" onclick="sqroot()" onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">Sqrt</button> </td>
-                <td><button id="two" class="button" type="button" value="=" onclick="equal()"  onmouseover="this.style.backgroundColor='#e91'" onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">=</button>
-                </td>
-            </tr>
-        </table>
+                    </tr>
+                    <tr>
+                        <td><button class="button" type="button" value="7" onclick="insert(7)"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">7</button> </td>
+                        <td><button class="button" type="button" value="8" onclick="insert(8)"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">8</button> </td>
+                        <td><button class="button" type="button" value="9" onclick="insert(9)"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">9</button> </td>
+                        <td><button class="button" type="button" value="/" onclick="insert('/')"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">/</button> </td>
+
+                    </tr>
+                    <tr>
+                        <td><button class="button" type="button" value="4" onclick="insert(4)"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">4</button> </td>
+                        <td><button class="button" type="button" value="5" onclick="insert(5)"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">5</button> </td>
+                        <td><button class="button" type="button" value="6" onclick="insert(6)"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">6</button> </td>
+                        <td><button class="button" type="button" value="x" onclick="insert('*')"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">x</button> </td>
+
+                    </tr>
+                    <tr>
+                        <td><button class="button" type="button" value="1" onclick="insert(1)"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">1</button></td>
+                        <td><button class="button" type="button" value="2" onclick="insert(2)"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">2</button> </td>
+                        <td><button class="button" type="button" value="3" onclick="insert(3)"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">3</button> </td>
+                        <td><button class="button" type="button" value="+" onclick="insert('+')"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">+</button> </td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="1"><button type="button" class="button" value="sin" onclick="sin()"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">Sin</button> </td>
+                        <td colspan="1"><button type="button" class="button" value="cos" onclick="cos()"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">Cos</button> </td>
+                        <td colspan="1"><button type="button" class="button" value="tan" onclick="tan()"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">Tan</button> </td>
+                        <td><button class="button" type="button" value="-" onclick="insert('-')"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">-</button> </td>
+                    </tr>
+                    <tr>
+                        <td><button id="one" class="button" type="button" value="0" onclick="insert(0)"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">0</button>
+                        </td>
+                        <td><button class="button" type="button" value="." onclick="insert('.')"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">.</button></td>
+                        <td><button type="button" class="button" value="sqrt" onclick="sqroot()"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">Sqrt</button> </td>
+                        <td><button id="two" class="button" type="button" value="=" onclick="equal()"
+                                onmouseover="this.style.backgroundColor='#e91'"
+                                onmouseout="this.style.backgroundColor='rgba(0, 0, 0, 0.623)'">=</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
-
 </body>
 
 </html>
